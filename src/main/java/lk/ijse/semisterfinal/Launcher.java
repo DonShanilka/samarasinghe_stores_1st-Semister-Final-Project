@@ -15,7 +15,7 @@ public class Launcher extends Application {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminMainDashbord.fxml"))));
         stage.centerOnScreen();
         stage.setTitle("DashBoard");
-
+        System.out.println("Hello");
         stage.show();
     }
 }
