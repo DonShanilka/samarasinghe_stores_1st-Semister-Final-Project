@@ -85,7 +85,7 @@ public class UpdateCustomerController {
             if (!validateEmployee()){
                 return;
             }
-            var dto = new CusromerDTO(id,address,name,contact,item_id,Payment);
+            var dto = new CusromerDTO(id,address,name,contact,Payment);
             boolean isUpdate = CustomerModel.updateCustomer(dto);
 
             if (isUpdate){
@@ -105,7 +105,6 @@ public class UpdateCustomerController {
                 customerAddress.setText(dto.getTxtCustAddress());
                 customerName.setText(dto.getTxtCustName());
                 customerMobile.setText(dto.getTxtCustMobile());
-                itemId.setText(dto.getTxtCustitemId());
                 payment.setText(dto.getTxtCustPayment());
             } catch (SQLException e) {
                 throw new RuntimeException(e);

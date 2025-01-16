@@ -90,7 +90,6 @@ public class AddCustomerController implements Initializable {
         txtCustName.setText(row.getName());
         txtCustMobile.setText(row.getTel());
         txtCustPayment.setText(row.getPayment());
-        txtCustitemId.setText(row.getItemId());
 
     }
 
@@ -123,7 +122,7 @@ public class AddCustomerController implements Initializable {
             /*if (!validateEmployee()){
                 return;
             }*/
-            var dto = new CusromerDTO(id,address,name,contact,item_id,Payment);
+            var dto = new CusromerDTO(id,address,name,contact,Payment);
             boolean isUpdate = CustomerModel.updateCustomer(dto);
 
             if (isUpdate){
@@ -164,7 +163,7 @@ public class AddCustomerController implements Initializable {
             if (!validateCustomer()){
                 return;
             }
-            var dto = new CusromerDTO(custId,custAddress,custName,custMobile,custItemid,custPayment);
+            var dto = new CusromerDTO(custId,custAddress,custName,custMobile,custPayment);
             boolean isadd= CustomerModel.AddCustomer(dto);
             if (isadd){
                 new Alert(Alert.AlertType.CONFIRMATION,"Customer is Added").show();
@@ -194,7 +193,6 @@ public class AddCustomerController implements Initializable {
                                 dto.getTxtCustName(),
                                 dto.getTxtCustAddress(),
                                 dto.getTxtCustMobile(),
-                                dto.getTxtCustitemId(),
                                 dto.getTxtCustPayment()
                         )
                 );

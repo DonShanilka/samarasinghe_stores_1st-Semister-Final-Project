@@ -9,16 +9,14 @@ public class CustomerTm {
     private String address;
     private String tel;
     private String payment;
-    private String itemId;
 
-
-    public CustomerTm(String txtCustId, String txtCustName, String txtCustAddress, String txtCustMobile, String txtCustPayment, String txtCustitemId) {
+    public CustomerTm(String txtCustId, String txtCustName, String txtCustAddress, String txtCustMobile, String txtCustPayment) {
         this.id = txtCustId;
         this.name = txtCustName;
         this.address = txtCustAddress;
         this.tel = txtCustMobile;
         this.payment = txtCustPayment;
-        this.itemId = txtCustitemId;
+
     }
 
     public void setId(String id) {
@@ -51,7 +49,4 @@ public class CustomerTm {
         this.payment = payment;
     }
 
-    public void setItemId(String itemId) {
-        this.itemId = itemId;
-    }
 }

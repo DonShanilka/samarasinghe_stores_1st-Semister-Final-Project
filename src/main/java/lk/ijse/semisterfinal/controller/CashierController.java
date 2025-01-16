@@ -332,12 +332,12 @@ public class CashierController {
         calculateBalance();
         clearField();
 
-        InputStream inputStream = getClass().getResourceAsStream("../reports/megaMartCustomerBill.jrxml");
-        JasperDesign jasperDesign = JRXmlLoader.load(inputStream);
-        JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
-        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,null,
-                DbConnetion.getInstance().getConnection());
-        JasperViewer.viewReport(jasperPrint,false);
+//        InputStream inputStream = getClass().getResourceAsStream("../reports/megaMartCustomerBill.jrxml");
+//        JasperDesign jasperDesign = JRXmlLoader.load(inputStream);
+//        JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+//        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,null,
+//                DbConnetion.getInstance().getConnection());
+//        JasperViewer.viewReport(jasperPrint,false);
 
     }
 

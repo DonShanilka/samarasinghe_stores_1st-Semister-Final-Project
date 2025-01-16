@@ -16,15 +16,14 @@ public class CustomerModel {
         Connection connection = DbConnetion.getInstance().getConnection();
 
 
-        String sql = "INSERT INTO customer VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO customer VALUES(?,?,?,?,?)";
         PreparedStatement ptm = connection.prepareStatement(sql);
 
         ptm.setString(1, dto.getTxtCustId());
         ptm.setString(2, dto.getTxtCustAddress());
         ptm.setString(3, dto.getTxtCustName());
         ptm.setString(4, dto.getTxtCustMobile());
-        ptm.setString(5, dto.getTxtCustitemId());
-        ptm.setString(6, dto.getTxtCustPayment());
+        ptm.setString(5, dto.getTxtCustPayment());
 
         return ptm.executeUpdate()>0;
     }
@@ -55,8 +54,7 @@ public class CustomerModel {
                             resultSet.getString(2),
                             resultSet.getString(3),
                             resultSet.getString(4),
-                            resultSet.getString(5),
-                            resultSet.getString(6)
+                            resultSet.getString(5)
                     )
             );
 
@@ -91,16 +89,15 @@ public class CustomerModel {
     public static boolean updateCustomer(CusromerDTO dto) throws SQLException {
         Connection connection = DbConnetion.getInstance().getConnection();
 
-        String sql = "UPDATE customer SET custAddress = ?, custName = ?, custMobile = ?, custItemId = ? , custPayment =?  WHERE customer_id = ?";
+        String sql = "UPDATE customer SET custAddress = ?, custName = ?, custMobile = ? , custPayment = ?  WHERE custId = ?";
 
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1,dto.getTxtCustAddress());
         pstm.setString(2,dto.getTxtCustName());
         pstm.setString(3,dto.getTxtCustMobile());
-        pstm.setString(4, dto.getTxtCustitemId());
-        pstm.setString(5, dto.getTxtCustPayment());
-        pstm.setString(6, dto.getTxtCustId());
+        pstm.setString(4, dto.getTxtCustPayment());
+        pstm.setString(5, dto.getTxtCustId());
 
         return pstm.executeUpdate() >0;
 

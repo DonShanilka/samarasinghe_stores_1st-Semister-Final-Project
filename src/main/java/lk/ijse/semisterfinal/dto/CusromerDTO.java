@@ -14,15 +14,6 @@ public class CusromerDTO {
     private String txtCustAddress;
     private String txtCustName;
     private String txtCustMobile;
-    private String txtCustitemId;
     private String txtCustPayment;
-
-    public CusromerDTO(String custId, String custAddress, String custName, String custMobile, String payment) {
-        txtCustId = custId;
-        txtCustAddress = custAddress;
-        txtCustName = custName;
-        txtCustMobile = custMobile;
-        txtCustPayment = payment;
-    }
 
 }
