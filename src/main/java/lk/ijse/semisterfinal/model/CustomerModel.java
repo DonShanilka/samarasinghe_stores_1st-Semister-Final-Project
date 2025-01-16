@@ -66,7 +66,7 @@ public class CustomerModel {
     public static CusromerDTO searchCustomer(String id) throws SQLException {
         Connection connection = DbConnetion.getInstance().getConnection();
 
-        String sql = "SELECT * FROM customer WHERE custId = ? ";
+        String sql = "SELECT * FROM customer WHERE custId = ?";
         PreparedStatement pstm = connection.prepareStatement(sql);
         pstm.setString(1, id);
 
@@ -74,17 +74,19 @@ public class CustomerModel {
 
         CusromerDTO dto = null;
 
-        if (resultSet.next()){
+        if (resultSet.next()) {
             String cust_id = resultSet.getString(1);
             String cust_address = resultSet.getString(2);
             String cust_name = resultSet.getString(3);
             String cust_mobile = resultSet.getString(4);
             String payment = resultSet.getString(5);
 
-            dto = new CusromerDTO(cust_id,cust_address,cust_name,cust_mobile,payment);
+            dto = new CusromerDTO(cust_id, cust_address, cust_name, cust_mobile, payment);
+            System.out.println("Customer Details: " + dto);
         }
-        return dto;
+        return dto; // Will return null if no matching customer is found.
     }
+
 
     public static boolean updateCustomer(CusromerDTO dto) throws SQLException {
         Connection connection = DbConnetion.getInstance().getConnection();

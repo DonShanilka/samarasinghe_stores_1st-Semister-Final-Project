@@ -184,11 +184,19 @@ public class CashierController {
 
         try {
             CusromerDTO dto = CustomerModel.searchCustomer(id);
-            lblCustomerName.setText(dto.getTxtCustName());
+
+            if (dto != null) { // Check if the dto is not null
+                System.out.println("Customer Name: " + dto);
+                lblCustomerName.setText(dto.getTxtCustName());
+            } else {
+                lblCustomerName.setText("Customer not found");
+                System.out.println("No customer found for ID: " + id);
+            }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error fetching customer data", e);
         }
     }
+
 
     public void cmbItemOnAction(ActionEvent event) {
         String id = cmbItemCode.getValue();
