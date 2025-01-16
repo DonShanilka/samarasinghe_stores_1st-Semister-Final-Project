@@ -183,20 +183,12 @@ public class CashierController {
         String id = cmbCustomerId.getValue();
 
         try {
-            CusromerDTO dto = CustomerModel.searchCustomer(id);
-
-            if (dto != null) { // Check if the dto is not null
-                System.out.println("Customer Name: " + dto);
-                lblCustomerName.setText(dto.getTxtCustName());
-            } else {
-                lblCustomerName.setText("Customer not found");
-                System.out.println("No customer found for ID: " + id);
-            }
+            String dto = CustomerModel.searchCustomerName(id);
+            lblCustomerName.setText(dto);
         } catch (SQLException e) {
-            throw new RuntimeException("Error fetching customer data", e);
+            throw new RuntimeException(e);
         }
     }
-
 
     public void cmbItemOnAction(ActionEvent event) {
         String id = cmbItemCode.getValue();
@@ -332,10 +324,10 @@ public class CashierController {
             if (isSuccess) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Order Success!").show();
             } else {
-                new Alert(Alert.AlertType.ERROR, "Something went wrong!").show();
+                new Alert(Alert.AlertType.ERROR).show();
             }
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Somthing Went Wrong").show();
+            throw new RuntimeException("Error fetching customer data", e);
         }
         calculateBalance();
         clearField();

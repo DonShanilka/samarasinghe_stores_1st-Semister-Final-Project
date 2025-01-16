@@ -100,15 +100,15 @@ public class UpdateCustomerController {
     public void comcustomerId(ActionEvent event) {
             String id = (String) customerId.getValue();
 
-            try{
-                CusromerDTO dto = CustomerModel.searchCustomer(id);
-                customerAddress.setText(dto.getTxtCustAddress());
-                customerName.setText(dto.getTxtCustName());
-                customerMobile.setText(dto.getTxtCustMobile());
-                payment.setText(dto.getTxtCustPayment());
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
+//            try{
+//                String dto = CustomerModel.searchCustomerName(id);
+//                customerAddress.setText(dto.getTxtCustAddress());
+//                customerName.setText(dto.getTxtCustName());
+//                customerMobile.setText(dto.getTxtCustMobile());
+//                payment.setText(dto.getTxtCustPayment());
+//            } catch (SQLException e) {
+//                throw new RuntimeException(e);
+//            }
         }
 
     private void setValue() {
