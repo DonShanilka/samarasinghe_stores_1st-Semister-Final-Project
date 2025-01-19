@@ -59,8 +59,8 @@ public class AddCustomerController implements Initializable {
     public TextField txtCustPayment;
     @FXML
     public TextField txtCustAddress;
-    @FXML
-    public TextField txtCustitemId;
+//    @FXML
+//    public TextField txtCustitemId;
     @FXML
     public TextField txtCustId;
 
@@ -72,7 +72,7 @@ public class AddCustomerController implements Initializable {
         txtCustAddress.setText("");
         txtCustMobile.setText("");
         txtCustPayment.setText("");
-        txtCustitemId.setText("");
+//        txtCustitemId.setText("");
 
     }
 
@@ -105,7 +105,7 @@ public class AddCustomerController implements Initializable {
         tbCname.setCellValueFactory(new PropertyValueFactory<>("name"));
         tbCmobile.setCellValueFactory(new PropertyValueFactory<>("tel"));
         tbCpayment.setCellValueFactory(new PropertyValueFactory<>("payment"));
-        tbCitemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
+//        tbCitemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
 
     }
 
@@ -115,7 +115,7 @@ public class AddCustomerController implements Initializable {
         String address = txtCustAddress.getText();
         String name = txtCustName.getText();
         String contact = txtCustMobile.getText();
-        String item_id = txtCustitemId.getText();
+//        String item_id = txtCustitemId.getText();
         String  Payment = txtCustPayment.getText();
 
         try{
@@ -156,7 +156,7 @@ public class AddCustomerController implements Initializable {
         String custAddress = txtCustAddress.getText();
         String custName = txtCustName.getText();
         String custMobile = txtCustMobile.getText();
-        String custItemid = txtCustitemId.getText();
+//        String custItemid = txtCustitemId.getText();
         String custPayment = txtCustPayment.getText();
 
         try {

@@ -19,23 +19,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="755.0" prefWidth="1155.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.semisterfinal.controller.EmployeeController">
+<AnchorPane fx:id="root" prefHeight="755.0" prefWidth="1155.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.semisterfinal.controller.EmployeeController">
    <children>
       <Pane accessibleRole="LIST_VIEW" layoutX="-1.0" layoutY="-4.0" prefHeight="755.0" prefWidth="1157.0" style="-fx-background-color: #e6e6ff;">
          <children>
-            <Line endX="100.0" layoutX="130.0" layoutY="119.0" startX="-100.0" />
-            <Line endX="100.0" layoutX="129.0" layoutY="177.0" startX="-100.0" />
+            <Line endX="100.0" layoutX="129.0" layoutY="175.0" startX="-100.0" />
+            <Line endX="100.0" layoutX="376.0" layoutY="175.0" startX="-100.0" />
             <Line endX="100.0" layoutX="129.0" layoutY="231.0" startX="-100.0" />
             <Line endX="100.0" layoutX="129.0" layoutY="288.0" startX="-100.0" />
-            <TextField fx:id="txtEmployeeName" layoutX="29.0" layoutY="150.0" prefHeight="25.0" prefWidth="201.0" promptText="Employee Name" style="-fx-background-color: #e6e6ff;" />
+            <TextField fx:id="txtEmployeeName" layoutX="276.0" layoutY="148.0" prefHeight="25.0" prefWidth="201.0" promptText="Employee Name" style="-fx-background-color: #e6e6ff;" />
             <TextField fx:id="txtEmail" layoutX="29.0" layoutY="205.0" prefHeight="25.0" prefWidth="201.0" promptText="Email" style="-fx-background-color: #e6e6ff;" />
             <TextField fx:id="txtEmployeePhone" layoutX="29.0" layoutY="261.0" prefHeight="25.0" prefWidth="201.0" promptText="Phone" style="-fx-background-color: #e6e6ff;" />
-            <TextField fx:id="txtemployeeId" layoutX="29.0" layoutY="92.0" prefHeight="26.0" prefWidth="201.0" promptText="Employee id" style="-fx-background-color: #e6e6ff; -fx-background-radius: 20;" />
-            <Line endX="100.0" layoutX="377.0" layoutY="176.0" startX="-100.0" />
+            <TextField fx:id="txtemployeeId" layoutX="28.0" layoutY="148.0" prefHeight="26.0" prefWidth="201.0" promptText="Employee id" style="-fx-background-color: #e6e6ff; -fx-background-radius: 20;" />
+            <Line endX="100.0" layoutX="647.0" layoutY="175.0" startX="-100.0" />
             <Line endX="100.0" layoutX="376.0" layoutY="286.0" startX="-100.0" />
-            <TextField fx:id="txtAddress" layoutX="277.0" layoutY="150.0" prefHeight="25.0" prefWidth="201.0" promptText="Address" style="-fx-background-color: #e6e6ff;" />
+            <TextField fx:id="txtAddress" layoutX="547.0" layoutY="149.0" prefHeight="25.0" prefWidth="201.0" promptText="Address" style="-fx-background-color: #e6e6ff;" />
             <TextField fx:id="txtPossition" layoutX="276.0" layoutY="259.0" prefHeight="25.0" prefWidth="201.0" promptText="Possition" style="-fx-background-color: #e6e6ff;" />
-            <DatePicker fx:id="empDate" layoutX="276.0" layoutY="93.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #00004DFF;" />
+            <DatePicker fx:id="empDate" layoutX="885.0" layoutY="150.0" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #00004DFF;" />
             <JFXButton buttonType="RAISED" layoutX="786.0" layoutY="330.0" onAction="#EmployeeAddOnAction" prefHeight="32.0" prefWidth="92.0" style="-fx-background-color: #00b359; -fx-background-radius: 5;" text="+ Add">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -100,7 +100,6 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <Line endX="100.0" layoutX="646.0" layoutY="174.0" startX="-100.0" />
             <Line endX="100.0" layoutX="646.0" layoutY="230.0" startX="-100.0" />
             <TextField fx:id="txtBasicSalary" layoutX="546.0" layoutY="204.0" prefHeight="25.0" prefWidth="201.0" promptText="Basic Salary" style="-fx-background-color: #e6e6ff;" />
             <Line endX="100.0" layoutX="646.0" layoutY="286.0" startX="-100.0" />
@@ -112,10 +111,10 @@
             </Label>
             <ChoiceBox fx:id="gender" layoutX="330.0" layoutY="206.0" prefHeight="25.0" prefWidth="146.0" />
             <Text layoutX="275.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender :" />
-            <ChoiceBox fx:id="department" layoutX="869.0" layoutY="149.0" prefHeight="25.0" prefWidth="146.0" />
-            <Text layoutX="797.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department :" />
-            <ChoiceBox fx:id="txtEducation" layoutX="608.0" layoutY="147.0" prefHeight="25.0" prefWidth="139.0" />
-            <Text layoutX="546.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Education :" />
+            <ChoiceBox fx:id="department" layoutX="886.0" layoutY="203.0" prefHeight="25.0" prefWidth="146.0" />
+            <Text layoutX="798.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department :" />
+            <ChoiceBox fx:id="txtEducation" layoutX="885.0" layoutY="260.0" prefHeight="25.0" prefWidth="146.0" />
+            <Text layoutX="798.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Education :" />
          </children>
       </Pane>
       <Label fx:id="lblTotalEmployee" layoutX="914.0" layoutY="31.0" prefHeight="30.0" prefWidth="0.0" textFill="WHITE">

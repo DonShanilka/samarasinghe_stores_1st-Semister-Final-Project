@@ -18,28 +18,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="766.0" prefWidth="1087.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.semisterfinal.controller.AddCustomerController">
+<AnchorPane prefHeight="766.0" prefWidth="1087.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.semisterfinal.controller.AddCustomerController">
    <children>
       <Pane layoutY="-3.0" prefHeight="766.0" prefWidth="1147.0" style="-fx-background-color: #e6e6ff;" styleClass="box" stylesheets="@style.css">
          <children>
-            <JFXButton buttonType="RAISED" layoutX="210.0" layoutY="621.0" onAction="#CustomerDeleteOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: orange;" text="Delete" />
-            <JFXButton buttonType="RAISED" layoutX="108.0" layoutY="621.0" onAction="#CustomerUpdateOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Update" />
-            <JFXButton buttonType="RAISED" layoutX="13.0" layoutY="621.0" onAction="#CustomerAddOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #2ecc71;" text="+ Add" />
+            <JFXButton buttonType="RAISED" layoutX="1042.0" layoutY="374.0" onAction="#CustomerDeleteOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: orange;" text="Delete" />
+            <JFXButton buttonType="RAISED" layoutX="940.0" layoutY="374.0" onAction="#CustomerUpdateOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Update" />
+            <JFXButton buttonType="RAISED" layoutX="845.0" layoutY="374.0" onAction="#CustomerAddOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #2ecc71;" text="+ Add" />
+            <TableView fx:id="CustomerAddTable" layoutX="30.0" layoutY="452.0" prefHeight="282.0" prefWidth="1090.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="tbCid" prefWidth="106.0" text="Customer id" />
+                <TableColumn fx:id="tbCname" prefWidth="176.0" text="Customer Name" />
+                  <TableColumn fx:id="tbCaddress" minWidth="8.0" prefWidth="378.0" text="Address" />
+                  <TableColumn fx:id="tbCmobile" prefWidth="209.0" text="Mobile" />
+                  <TableColumn fx:id="tbCpayment" minWidth="0.0" prefWidth="220.0" text="Payment" />
+              </columns>
+            </TableView>
          </children></Pane>
       <BorderPane fx:id="borderPane" prefHeight="192.0" prefWidth="761.0">
          <center>
-            <AnchorPane prefHeight="337.0" prefWidth="1134.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="312.0" prefWidth="1111.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="CustomerAddTable" layoutX="24.0" layoutY="173.0" prefHeight="276.0" prefWidth="1090.0" stylesheets="@style.css">
-                    <columns>
-                      <TableColumn fx:id="tbCid" prefWidth="106.0" text="Customer id" />
-                      <TableColumn fx:id="tbCname" prefWidth="176.0" text="Customer Name" />
-                        <TableColumn fx:id="tbCaddress" minWidth="8.0" prefWidth="347.0" text="Address" />
-                        <TableColumn fx:id="tbCmobile" prefWidth="194.0" text="Mobile" />
-                        <TableColumn fx:id="tbCpayment" minWidth="0.0" prefWidth="171.0" text="Payment" />
-                        <TableColumn fx:id="tbCitemId" minWidth="0.0" prefWidth="95.0" text="Item Id" />
-                    </columns>
-                  </TableView>
                   <Label fx:id="newCustomer" layoutX="24.0" layoutY="30.0" text="Add New Customer">
                      <font>
                         <Font name="System Bold" size="18.0" />
@@ -79,57 +78,48 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
+                  <AnchorPane layoutX="24.0" layoutY="162.0" prefHeight="177.0" prefWidth="1090.0" stylesheets="@style.css">
+                     <children>
+                        <TextField fx:id="txtCustId" layoutX="51.0" layoutY="69.0" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #e6e6ff;" />
+                        <Label layoutX="18.0" layoutY="79.0" text="Id -">
+                           <font>
+                              <Font name="Candara Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="894.0" layoutY="77.0" text="Mobile - ">
+                           <font>
+                              <Font name="Candara Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCustMobile" layoutX="944.0" layoutY="66.0" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #e6e6ff;" />
+                        <Label layoutX="281.0" layoutY="77.0" text="Name -">
+                           <font>
+                              <Font name="Candara Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCustName" layoutX="328.0" layoutY="66.0" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #e6e6ff;" />
+                        <Label layoutX="18.0" layoutY="138.0" text="Payment - ">
+                           <font>
+                              <Font name="Candara Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCustPayment" layoutX="76.0" layoutY="127.0" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: #e6e6ff;" />
+                        <Label layoutX="561.0" layoutY="77.0" text="Address - ">
+                           <font>
+                              <Font name="Candara Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCustAddress" layoutX="615.0" layoutY="67.0" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #e6e6ff;" />
+                        <Line endX="100.0" layoutX="111.0" layoutY="97.0" startX="-62.0" />
+                        <Line endX="100.0" layoutX="384.0" layoutY="95.0" startX="-62.0" />
+                        <Line endX="100.0" layoutX="680.0" layoutY="95.0" startX="-62.0" />
+                        <Line endX="75.0" layoutX="140.0" layoutY="155.0" startX="-62.0" />
+                        <Line endX="90.0" layoutX="999.0" layoutY="93.0" startX="-62.0" />
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </center>
-         <bottom>
-            <AnchorPane prefHeight="177.0" prefWidth="1104.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
-               <children>
-                  <TextField fx:id="txtCustId" layoutX="51.0" layoutY="69.0" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #e6e6ff;" />
-                  <Label layoutX="18.0" layoutY="79.0" text="Id -">
-                     <font>
-                        <Font name="Candara Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="18.0" layoutY="129.0" text="Mobile - ">
-                     <font>
-                        <Font name="Candara Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="txtCustMobile" layoutX="68.0" layoutY="118.0" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #e6e6ff;" />
-                  <Label layoutX="257.0" layoutY="79.0" text="Name -">
-                     <font>
-                        <Font name="Candara Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="txtCustName" layoutX="304.0" layoutY="68.0" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #e6e6ff;" />
-                  <Label layoutX="256.0" layoutY="129.0" text="Payment - ">
-                     <font>
-                        <Font name="Candara Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="txtCustPayment" layoutX="314.0" layoutY="118.0" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: #e6e6ff;" />
-                  <Label layoutX="509.0" layoutY="76.0" text="Address - ">
-                     <font>
-                        <Font name="Candara Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="txtCustAddress" layoutX="563.0" layoutY="66.0" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #e6e6ff;" />
-                  <Label layoutX="507.0" layoutY="134.0" text="Item id - ">
-                     <font>
-                        <Font name="Candara Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="txtCustitemId" layoutX="565.0" layoutY="121.0" prefHeight="25.0" prefWidth="166.0" style="-fx-background-color: #e6e6ff;" />
-                  <Line endX="100.0" layoutX="111.0" layoutY="97.0" startX="-62.0" />
-                  <Line endX="100.0" layoutX="360.0" layoutY="97.0" startX="-62.0" />
-                  <Line endX="100.0" layoutX="628.0" layoutY="94.0" startX="-62.0" />
-                  <Line endX="100.0" layoutX="628.0" layoutY="147.0" startX="-62.0" />
-                  <Line endX="75.0" layoutX="378.0" layoutY="146.0" startX="-62.0" />
-                  <Line endX="90.0" layoutX="123.0" layoutY="145.0" startX="-62.0" />
-               </children>
-            </AnchorPane>
-         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>
